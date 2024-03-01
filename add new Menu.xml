@@ -1,0 +1,8 @@
+<record model="ir.actions.act_window" id="action_menu_name">
+        <field name="name">Menu Name</field> 
+        <field name="res_model">class_for_menu</field> 
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+<menuitem name="Menu Name" id="menu_name" parent="menu_komisi_atas" action="action_menu_name" sequence="10"/>
