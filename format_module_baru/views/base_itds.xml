@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="event_visitor_form_view">
+            <field name="name">event_visitor.form</field>
+            <field name="model">event_visitor</field>
+            <field name="arch" type="xml">
+                <form string="Events">
+                     <header>
+                        <!-- <field name="state" widget="statusbar" statusbar_visible="draft,run,close"/> -->
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                           <label for="name" string="Event Name" />
+                            <h1>
+                                <field name="event_name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group string="Event Detail">
+                                <field name="event_type"/>
+                                <field name="event_date_start"/>
+                                <field name="event_date_end"/>
+                                <label for="event_periode"/>
+                                    <div class="o_row" name="event_periode">
+                                    <field name="event_periode"/>
+                                    <span> Days</span>
+                                    </div>
+                                <field name="event_venue"/>
+                                <field name="event_tema"/>
+                            </group>
+                            <group string="Visitor">
+                                <field name="visitor_outlet"/>
+                                <field name="visitor_pic"/>
+                                <field name="visitor_role"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="event_visitor_tree_view">
+            <field name="name">event_visitor.tree</field>
+            <field name="model">event_visitor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="event_name"/>
+                    <field name="event_date_start"/>
+                    <field name="event_date_end"/>
+                    <field name="event_venue"/>
+                    <field name="event_tema"/>
+                    <field name="visitor_outlet"/>
+                    <field name="visitor_pic"/>
+                    <field name="visitor_role"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>
+
+        <!-- <record id="action_event_visitor_act" model="ir.actions.act_window">
+            <field name="name">Events Visitor</field>
+            <field name="res_model">event_visitor</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>-->
